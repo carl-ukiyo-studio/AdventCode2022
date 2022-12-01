@@ -3,4 +3,5 @@
 public interface IDay
 {
     int Calculate(string input);
+    int Index { get; }
 }

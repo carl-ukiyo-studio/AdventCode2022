@@ -9,13 +9,13 @@ public class InputHelper
 
     public static async Task<StreamReader> GetInput(int day)
     {
-        string file = $"day{day}.txt";
+        var file = $"day{day}.txt";
 
         if (!File.Exists(file))
         {
-            string input = await GetInputFromUrl(day);
-            using StreamWriter writer = new(file);
-            writer.Write(input);
+            var input = await GetInputFromUrl(day);
+            await using StreamWriter writer = new(file);
+            await writer.WriteAsync(input);
         }
 
         return new StreamReader(file);
@@ -23,12 +23,12 @@ public class InputHelper
 
     private static async Task<string> GetInputFromUrl(int day)
     {
-        string sessionCookie = File.ReadAllText("cookie.txt");
+        var sessionCookie = await File.ReadAllTextAsync("cookie.txt");
 
         var client = new HttpClient();
         HttpRequestMessage request = new(HttpMethod.Get, $"https://adventofcode.com/2022/day/{day}/input");
         request.Headers.TryAddWithoutValidation("Cookie", $"session={sessionCookie}");
-        var response = await client.SendAsync(request);
+        HttpResponseMessage response = await client.SendAsync(request);
         return await response.Content.ReadAsStringAsync();
     }
 }

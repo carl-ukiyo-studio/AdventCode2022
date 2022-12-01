@@ -2,6 +2,6 @@
 
 public abstract class Day : IDay
 {
-    public int Index = 0;
     public abstract int Calculate(string input);
+    public abstract int Index { get; }
 }

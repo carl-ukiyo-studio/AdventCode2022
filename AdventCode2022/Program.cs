@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using AdventCode2022;
+using static AdventCode2022.InputHelper;
 
-Console.WriteLine("Hello, World!");
+IDay day1 = new Day1();
+
+StreamReader day1Input = await GetInput(day1.Index);
+Console.WriteLine(day1Input);
