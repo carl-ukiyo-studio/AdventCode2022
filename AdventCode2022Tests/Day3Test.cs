@@ -24,4 +24,18 @@ CrZsJsPPZsGzwwsLwLmpwMDw");
         var answer = _sut.Ex1(input);
         Assert.Equal(157, answer);
     }
+    
+    [Fact]
+    public void Ex2Test()
+    {
+        StreamReader input = InputHelper.ConvertStringToStream(@"vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw");
+
+        var answer = _sut.Ex2(input);
+        Assert.Equal(70, answer);
+    }
 }

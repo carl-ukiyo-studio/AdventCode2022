@@ -40,9 +40,9 @@ public class AdventCalendar
         StreamReader input = await GetInput(day3.Index);
         var day2Ex1Answer = day3.Ex1(input);
         Console.WriteLine(day2Ex1Answer.ToString());
-        // Console.WriteLine("Day 3 - Exercise 2");
-        // input = await GetInput(day3.Index);
-        // var day2Ex2Answer = day3.Ex2(input);
-        // Console.WriteLine(day2Ex2Answer.ToString());
+        Console.WriteLine("Day 3 - Exercise 2");
+        input = await GetInput(day3.Index);
+        var day2Ex2Answer = day3.Ex2(input);
+        Console.WriteLine(day2Ex2Answer.ToString());
     }
 }

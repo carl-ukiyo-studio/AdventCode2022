@@ -34,7 +34,35 @@ public class Day3 : Day
 
     public override int Ex2(StreamReader input)
     {
-        throw new NotImplementedException();
+        string line;
+        int totalValue = 0;
+        int count = 0;
+        List<string> group = new();
+        // Read and display lines from the file until the end of
+        // the file is reached.
+        while (input.Peek() >= 0)
+        {
+            line = input.ReadLine();
+            count++;
+            if (count < 3)
+            {
+                group.Add(line);
+            }
+            else
+            {
+                group.Add(line);
+                count = 0;
+                var list1 = group[0].ToCharArray();
+                var list2 = group[1].ToCharArray();
+                var list3 = group[2].ToCharArray();
+                var groupType = FindCommonTypeInGroup(list1, list2, list3);
+                var itemValue = itemValues.GetValueOrDefault(groupType.ToString());
+                totalValue += itemValue;
+                group.Clear();
+            }
+        }
+
+        return totalValue;
     }
 
     public override int Index { get; }
@@ -58,6 +86,13 @@ public class Day3 : Day
         var duplicates = list1.Intersect(list2).ToList();
 
         return duplicates.FirstOrDefault();
+    }
+
+    private char FindCommonTypeInGroup(char[] list1, char[] list2, char[] list3)
+    {
+        var firstIntersect = list1.Intersect(list2);
+        var duplicatesInGroup = firstIntersect.Intersect(list3);
+        return duplicatesInGroup.FirstOrDefault();
     }
 
     private void PrepareData()
