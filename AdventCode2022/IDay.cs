@@ -2,6 +2,9 @@
 
 public interface IDay
 {
-    int Calculate(string input);
+    int Ex1(StreamReader input);
+    int Ex2(StreamReader input);
+
+    string Test(string i, string j);
     int Index { get; }
 }
