@@ -38,11 +38,25 @@ public class AdventCalendar
         IDay day3 = new Day3();
         Console.WriteLine("Day 3 - Exercise 1");
         StreamReader input = await GetInput(day3.Index);
-        var day2Ex1Answer = day3.Ex1(input);
-        Console.WriteLine(day2Ex1Answer.ToString());
+        var day3Ex1Answer = day3.Ex1(input);
+        Console.WriteLine(day3Ex1Answer.ToString());
         Console.WriteLine("Day 3 - Exercise 2");
         input = await GetInput(day3.Index);
-        var day2Ex2Answer = day3.Ex2(input);
-        Console.WriteLine(day2Ex2Answer.ToString());
+        var day3Ex2Answer = day3.Ex2(input);
+        Console.WriteLine(day3Ex2Answer.ToString());
+    }
+    
+    public async Task Day4()
+    {
+        Console.WriteLine("====== Day 4 ======");
+        IDay day4 = new Day4();
+        Console.WriteLine("Day 4 - Exercise 1");
+        StreamReader input = await GetInput(day4.Index);
+        var day4Ex1Answer = day4.Ex1(input);
+        Console.WriteLine(day4Ex1Answer.ToString());
+        Console.WriteLine("Day 4 - Exercise 2");
+        input = await GetInput(day4.Index);
+        var day4Ex2Answer = day4.Ex2(input);
+        Console.WriteLine(day4Ex2Answer.ToString());
     }
 }

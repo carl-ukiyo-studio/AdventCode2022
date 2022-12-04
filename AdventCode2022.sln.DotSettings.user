@@ -8,6 +8,8 @@
     &lt;TestId&gt;xUnit::61A0AC0B-DFA3-474E-8A04-96B183FDE2A6::net7.0::AdventCode2022Tests.Day2Test.Ex1Test&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::61A0AC0B-DFA3-474E-8A04-96B183FDE2A6::net7.0::AdventCode2022Tests.Day3Test.Ex1Test&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::61A0AC0B-DFA3-474E-8A04-96B183FDE2A6::net7.0::AdventCode2022Tests.Day3Test.Ex2Test&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::61A0AC0B-DFA3-474E-8A04-96B183FDE2A6::net7.0::AdventCode2022Tests.Day4Test.Ex1Test&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::61A0AC0B-DFA3-474E-8A04-96B183FDE2A6::net7.0::AdventCode2022Tests.Day4Test.Ex2Test&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd5adb48_002Dba45_002D45e1_002Da37a_002D6dbad71b4fa8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Ex2Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
