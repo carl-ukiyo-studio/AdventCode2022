@@ -7,11 +7,6 @@ public class Day1 : Day
         Index = 1;
     }
 
-    public override string Test(string i, string j)
-    {
-        throw new NotImplementedException();
-    }
-
     public override int Index { get; }
 
     public override int Ex1(StreamReader input)
